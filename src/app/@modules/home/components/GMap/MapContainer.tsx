@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo } from "react";
 
 import GoogleMapReact from "google-map-react";
 import StationInformationType from "src/app/interfaces/station.information.type";

@@ -1,5 +1,3 @@
-import { StationStatusType } from "src/app/interfaces/station.status.type";
-
 export const FETCH_STATION_STATUS_ACTION_SUCCESS =
   "FETCH_STATION_STATUS_ACTION_SUCCESS";
 export const FETCH_STATION_STATUS_ACTION = "FETCH_STATION_STATUS_ACTION";
