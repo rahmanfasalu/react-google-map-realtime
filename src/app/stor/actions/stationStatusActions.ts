@@ -4,6 +4,7 @@ import { API } from "src/app/constants/gbfsConstants";
 import { normalizedStationStaus } from "./stationStatusSchema";
 import { EntityStationStatus } from "../../interfaces/station.status.type";
 
+// Station status action
 export const loadStationStatusActionSuccess = (
   data: EntityStationStatus
 ): types.programsDetailsActionTypes => {

@@ -12,15 +12,6 @@ const sizes = {
   maxMobileWidth: "525px",
 };
 
-// Used to calculate the hour size;
-export const ScreenWidth = {
-  large: 2000,
-  pc: 800,
-  meduim: 600,
-  small: 400,
-  extraSmall: 300,
-};
-
 export const Media = {
   phone: `(max-width: ${sizes.phone})`,
   tablet: `(max-width: ${sizes.tablet})`,

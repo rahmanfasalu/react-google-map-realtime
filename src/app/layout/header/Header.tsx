@@ -5,11 +5,8 @@ import styled from "styled-components";
 import Theme from "src/theme/theme";
 import { MarkerInfo } from "src/theme/CommonStyles";
 
-/*
- *  Header Layout
- *  Application Header
- *
- */
+// Header Layout
+// Application Header with user icon and info markers
 const Header = (): JSX.Element => {
   const markerWidth: string = "50px";
   const markerHeight: string = "40px";
@@ -53,9 +50,7 @@ const Header = (): JSX.Element => {
   );
 };
 
-/*
- *  Styled components
- */
+// Styled components
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;

@@ -1,3 +1,4 @@
+// Interface for station status
 export interface StationStatusType {
   station_id: string;
   is_installed: number;

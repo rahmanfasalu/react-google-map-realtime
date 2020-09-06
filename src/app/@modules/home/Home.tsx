@@ -1,10 +1,7 @@
 import React from "react";
 import { Landing } from "./components";
 
-/*
- * Module Home
- *
- */
+// Module Home
 const Home = (): JSX.Element => {
   return (
     <>

@@ -16,37 +16,6 @@ export const Fa = styled.i<FaProps>`
   color: ${({ color }) => (color ? color : Theme.colors.white)};
 `;
 
-export const ContentCenter = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const SemiHeader = styled.div`
-  text-transform: uppercase;
-  color: ${Theme.colors.white};
-  font-size: 22px;
-  padding: 0 15px;
-`;
-
-export const HeaderSmall = styled.div`
-  text-transform: capitalize;
-  color: ${Theme.colors.gray};
-  font-size: 18px;
-  padding: 0 15px;
-`;
-
-export const HeaderLarge = styled(SemiHeader)`
-  font-size: 26px;
-  text-transform: capitalize;
-`;
-export const FlexRow = styled.div`
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin: 5px 0;
-`;
-
 export const P = styled.p`
   font-size: 29px;
   padding: 0 15px;

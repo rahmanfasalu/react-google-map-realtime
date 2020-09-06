@@ -1,3 +1,4 @@
+// Interface for station information
 export default interface StationInformationType {
   station_id: string;
   name: any;

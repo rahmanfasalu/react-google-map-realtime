@@ -4,6 +4,9 @@ import {
   EntityStationStatus,
 } from "src/app/interfaces/station.status.type";
 
+// Schema for stations information
+// Entity schema for station information. station_id is used
+// as id
 export const normalizedStationStaus = (
   stationStatus: StationStatusType[]
 ): EntityStationStatus => {

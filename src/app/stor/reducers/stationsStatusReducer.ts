@@ -3,6 +3,8 @@ import initialState from "../initialState";
 
 import { programsDetailsActionTypes } from "../actionTypes/stationStatusActionTypes";
 
+// Station Status reducer.
+// Stations Status is realtime, update data at every 10 seconds
 export default function stationStatusReducer(
   state = initialState.stationsStatus,
   action: programsDetailsActionTypes

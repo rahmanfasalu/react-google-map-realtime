@@ -3,6 +3,7 @@ import { gbfsServices } from "../../../services/gbfsServices";
 import { API } from "../../constants/gbfsConstants";
 import StationInformationType from "src/app/interfaces/station.information.type";
 
+// Station information action
 export const loadSationInfoActionSuccess = (
   data: StationInformationType[]
 ): types.LoadStationsInfoActionType => {

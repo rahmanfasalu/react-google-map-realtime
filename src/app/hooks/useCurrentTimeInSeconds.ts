@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 
-/*
- *  HOOK: Second Trigger
- *  This will trigger every 10seconds with current day time in seconds.
- */
+// HOOK: Second Trigger
+// This will trigger every 10seconds with current day time in seconds.
 export default function useCurrentTimeInSeconds() {
   const currenTimeInSeconds =
     new Date().getHours() * 3600 + new Date().getMinutes() * 60;
@@ -12,7 +10,7 @@ export default function useCurrentTimeInSeconds() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setSeconds(seconds + 10);
-      //reset day
+      //reset the day
       if (seconds > 86400) {
         setSeconds(0);
       }

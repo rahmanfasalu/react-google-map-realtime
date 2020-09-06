@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { StationStatusType } from "src/app/interfaces/station.status.type";
 import StationInformationType from "src/app/interfaces/station.information.type";
 import Theme from "src/theme/theme";
+import { getMarkerClass } from "src/app/utils/gMapUtil";
 
+// Interface for GMapMarker component
 interface GMapMarkerType {
   lat: number;
   lng: number;
@@ -10,28 +12,31 @@ interface GMapMarkerType {
   station: StationInformationType;
 }
 
+// GMapMarker component
+// custom marker component for google map.
+// Info window will load oc click. Markers are categorized as following,
+// 1 -- Green Marker : This will be shown if both bycycle and parking slots avaialble
+// 2 -- Red  Marker  : If no bycycle available
+// 3 -- Blue : Bycycles are available but no parking slot.
+// Additional information will load on click.
 const GMapMarker = ({ status, station }: GMapMarkerType): JSX.Element => {
   const { green, red } = Theme.colors;
   const [showInfo, setShowInfo] = useState<boolean>();
-  const getMarkerClass = () => {
-    if (status.num_bikes_available === 0) {
-      return "markerRed";
-    } else if (status.num_docks_available === 0) {
-      return "markerBlue";
-    } else {
-      return "markerGreen";
-    }
-  };
 
+  // close info window
   const closeModel = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault();
     setShowInfo(false);
   };
+
+  // show info window
   const info = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault();
     setShowInfo(true);
   };
-  const cls: string = getMarkerClass();
+
+  // get the marker class
+  const cls: string = getMarkerClass(status);
 
   return (
     <div>

@@ -2,10 +2,8 @@ import React from "react";
 import { Route } from "react-router-dom";
 import RouteType from "../../interfaces/route.type";
 
-/*
- *  Shared: Build Route
- *  This will build route the routes based on the RouteType
- */
+// Shared: Build Route
+// This will build route the routes based on the RouteType
 function BuildRoute({ routes }: { routes: RouteType[] }): JSX.Element {
   return (
     <>

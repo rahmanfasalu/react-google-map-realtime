@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadStationInfo } from "src/app/stor/actions/stationInfoActions";
 import { loadStationStatusActions } from "src/app/stor/actions/stationStatusActions";
@@ -9,9 +9,8 @@ import MapContainer from "../GMap/MapContainer";
 import styled from "styled-components";
 import { EntityStationStatus } from "src/app/interfaces/station.status.type";
 
-/*
- *  Landing Screen
- */
+// Landing Screen
+// Landing screen with google map and associated markers.
 function Landing(): JSX.Element {
   const dispatch = useDispatch();
   const { seconds } = useCurrentTimeInSeconds();
@@ -30,19 +29,21 @@ function Landing(): JSX.Element {
     }
   );
 
+  // Fetch stations status at every n seconds
   useEffect(() => {
     if (stationStatus !== null && !stationStatus.loading) {
       dispatch(loadStationStatusActions());
     }
-  }, [dispatch]);
+  }, [dispatch, seconds]);
 
+  // Fetch Station information
   useEffect(() => {
     dispatch(loadStationInfo());
   }, [dispatch]);
 
   return (
     <LandingContainer>
-      <MapContainer
+      <MapContainer // Google map container component with memo.
         locations={stationInfo}
         status={stationStatus}
       ></MapContainer>
@@ -50,6 +51,7 @@ function Landing(): JSX.Element {
   );
 }
 
+// Styled component
 const LandingContainer = styled.div`
   overflow: scroll;
   position: relative;

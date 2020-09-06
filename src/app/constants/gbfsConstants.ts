@@ -1,11 +1,10 @@
-/*
- *  Service API
- */
+// Service API
 export const API = {
   station_info: "/station_information.json",
   station_status: "/station_status.json",
 };
 
+// Map cosntants
 export const mapOptions = {
   key: "AIzaSyBToAl74ANfOp_iXlkmjVHq1V8Xdf67cBY",
   defaultZoom: 14,
